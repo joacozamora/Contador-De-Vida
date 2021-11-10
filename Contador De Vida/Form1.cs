@@ -62,10 +62,6 @@ namespace Contador_De_Vida
         public void button1_Click(object sender, EventArgs e)
         {
 
-
-
-
-
             int i = 0;
 
             while (i != 51)
@@ -80,6 +76,8 @@ namespace Contador_De_Vida
                 i = i + 1;
 
             }
+
+
 
             bool opcion0 = false;
             if (Contadores.Anio_Actual == 0)
@@ -160,7 +158,7 @@ namespace Contador_De_Vida
             lblMes.Text = System.Convert.ToString(Contadores.Meses_Vividos);
             lblDias.Text = System.Convert.ToString(Contadores.Dias_Vividos);
 
-
+            ListaCalculo.Cargar(Contadores);
         }
 
         public void button2_Click(object sender, EventArgs e)
@@ -169,6 +167,7 @@ namespace Contador_De_Vida
             int Cantidad_Dias_Anios = Contadores.Anios_Vividos * 365;
             int Cantidad_Dias_Total = Contadores.Dias_Vividos + Cantidad_Dias_Anios + Cantidad_Dias_Meses;
             lblTotalDias.Text = System.Convert.ToString(Cantidad_Dias_Total);
+            ListaCalculo.Cargar(Contadores);
         }
 
 
